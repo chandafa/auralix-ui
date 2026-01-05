@@ -1,0 +1,33 @@
+export const docsConfig = {
+  gettingStarted: [
+    { name: "Introduction", href: "/docs/introduction" },
+    { name: "Installation", href: "/docs/installation" },
+  ],
+  frameworkGuides: [
+    { name: "NextJS", href: "/docs/frameworks/nextjs" },
+    { name: "Vite", href: "/docs/frameworks/vite" },
+  ],
+  components: [
+    { name: "Alert", href: "/components/alert" },
+    { name: "AnimatedGradientText", href: "/components/animated-gradient-text" },
+    { name: "Badge", href: "/components/badge" },
+    { name: "BlurText", href: "/components/blur-text" },
+    { name: "BorderBeam", href: "/components/border-beam" },
+    { name: "Button", href: "/components/button" },
+    { name: "Card", href: "/components/card" },
+    { name: "Dock", href: "/components/dock" },
+    { name: "Form", href: "/components/form" },
+    { name: "GlassCard", href: "/components/glass-card" },
+    { name: "Input", href: "/components/input" },
+    { name: "MagicCard", href: "/components/magic-card" },
+    { name: "MeteorMeteors", href: "/components/meteor-meteors" },
+    { name: "Modal", href: "/components/modal" },
+    { name: "NeonButton", href: "/components/neon-button" },
+    { name: "Select", href: "/components/select" },
+    { name: "SpotlightCard", href: "/components/spotlight-card" },
+    { name: "Table", href: "/components/table" },
+    { name: "Textarea", href: "/components/textarea" },
+    { name: "Tooltip", href: "/components/tooltip" },
+    { name: "TrueFocus", href: "/components/true-focus" },
+  ],
+};

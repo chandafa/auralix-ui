@@ -1,0 +1,21 @@
+# Task: Implement Unique Components (React Bits / Magic UI Style)
+
+- [x] Check dependencies (framer-motion, etc.) <!-- id: 0 -->
+- [x] Implement **AnimatedGradientText** <!-- id: 1 -->
+  - [x] Create component file
+  - [x] Add to documentation
+- [x] Implement **BorderBeam** <!-- id: 2 -->
+  - [x] Create component file
+  - [x] Add to documentation
+- [x] Implement **Dock** (macOS style) <!-- id: 3 -->
+  - [x] Create component file
+  - [x] Add to documentation
+- [x] Implement **MeteorMeteors** (Background Effect) <!-- id: 7 -->
+  - [x] Create component file
+  - [x] Add to documentation
+- [x] Implement **MagicCard** (Gradient Border) <!-- id: 8 -->
+  - [x] Create component file
+  - [x] Add to documentation
+- [x] Register all new components in `docsConfig` <!-- id: 4 -->
+- [x] Create/Update component pages for previews <!-- id: 5 -->
+- [x] Verify all new components in the browser <!-- id: 6 -->
