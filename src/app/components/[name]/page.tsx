@@ -36,7 +36,7 @@ export function generateMetadata({ params }: { params: Promise<{ name: string }>
   return params.then(({ name }) => {
     const data = getComponentData(name);
     return {
-      title: data ? `${data.name} - Aural UI` : "Component - Aural UI",
+      title: data ? `${data.name} - Auralix UI` : "Component - Auralix UI",
       description: data?.description || "UI Component documentation",
     };
   });

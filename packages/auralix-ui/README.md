@@ -1,11 +1,11 @@
-# Aural UI
+# Auralix UI
 
 Modern UI component library with glass morphism effects for React.
 
 ## Installation
 
 ```bash
-npm install aural-ui
+npm install auralix-ui
 ```
 
 ## Setup
@@ -15,7 +15,7 @@ npm install aural-ui
 Import the styles in your main CSS file or `_app.tsx`/`layout.tsx`:
 
 ```tsx
-import "aural-ui/styles.css";
+import "auralix-ui/styles.css";
 ```
 
 Or add the CSS variables manually to your global CSS.
@@ -28,7 +28,7 @@ Add the following to your `tailwind.config.js`:
 module.exports = {
   content: [
     // ... your paths
-    "./node_modules/aural-ui/**/*.{js,mjs}",
+    "./node_modules/auralix-ui/**/*.{js,mjs}",
   ],
   theme: {
     extend: {
@@ -57,12 +57,12 @@ module.exports = {
 ## Usage
 
 ```tsx
-import { Button, Card, CardContent, Alert } from "aural-ui";
+import { Button, Card, CardContent, Alert } from "auralix-ui";
 
 export default function Example() {
   return (
     <div className="p-6 space-y-4">
-      <Alert variant="success">Aural UI is ready to use!</Alert>
+      <Alert variant="success">Auralix UI is ready to use!</Alert>
 
       <Card hoverable>
         <CardContent>

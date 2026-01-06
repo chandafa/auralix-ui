@@ -77,7 +77,7 @@ export default function HomePage() {
           
           {/* NPM Command */}
           <ScrollAnimation animation="fade-up" delay={400}>
-            <CopyCommand command="npm install aural-ui" />
+            <CopyCommand command="npm install auralix-ui" />
           </ScrollAnimation>
         </div>
       </section>
@@ -124,7 +124,7 @@ export default function HomePage() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 Why Choose{" "}
                 <span className="bg-gradient-to-r from-violet-500 to-purple-500 bg-clip-text text-transparent">
-                  Aural UI
+                  Auralix UI
                 </span>
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
@@ -250,7 +250,7 @@ export default function HomePage() {
               ?
             </h2>
             <p className="text-muted-foreground mb-8 sm:mb-10 max-w-2xl mx-auto text-sm sm:text-base">
-              Get started with Aural UI today and build beautiful, accessible applications faster than ever.
+              Get started with Auralix UI today and build beautiful, accessible applications faster than ever.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/docs/installation" className="w-full sm:w-auto">
@@ -280,7 +280,7 @@ export default function HomePage() {
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
                   A
                 </div>
-                <span className="font-semibold">Aural UI</span>
+                <span className="font-semibold">Auralix UI</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Modern UI component library for React applications.
@@ -313,7 +313,7 @@ export default function HomePage() {
           </div>
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
             <p>Built with ❤️ using Next.js, TypeScript, and Tailwind CSS.</p>
-            <p className="mt-2">© {new Date().getFullYear()} Aural UI. All rights reserved.</p>
+            <p className="mt-2">© {new Date().getFullYear()} Auralix UI. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,8 +1,8 @@
 {
-  "name": "aural-ui",
-  "version": "1.0.0",
+  "name": "auralix-ui",
+  "version": "1.0.1",
   "description": "Modern UI component library with glass morphism effects for React",
-  "author": "Aural UI Team",
+  "author": "Auralix UI Team",
   "license": "MIT",
   "keywords": [
     "react",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/aural-ui"
+    "url": "git+https://github.com/chandafa/auralix-ui.git"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

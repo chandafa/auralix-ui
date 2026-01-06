@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Aural UI - Modern UI Component Library",
+  title: "Auralix UI - Modern UI Component Library",
   description: "A collection of reusable, accessible UI components built with React, TypeScript, and Tailwind CSS.",
   keywords: ["UI", "components", "React", "TypeScript", "Tailwind CSS", "design system"],
 };

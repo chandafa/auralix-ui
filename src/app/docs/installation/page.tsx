@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { CodeBlock } from "@/components/docs/CodeBlock";
 
 export const metadata = {
-  title: "Installation - Aural UI",
-  description: "How to install and setup Aural UI in your project.",
+  title: "Installation - Auralix UI",
+  description: "How to install and setup Auralix UI in your project.",
 };
 
 export default function InstallationPage() {
@@ -16,7 +16,7 @@ export default function InstallationPage() {
         <Badge variant="info" className="mb-4">Getting Started</Badge>
         <h1 className="text-4xl font-bold tracking-tight mb-4">Installation</h1>
         <p className="text-xl text-muted-foreground">
-          How to install and setup Aural UI in your project.
+          How to install and setup Auralix UI in your project.
         </p>
       </div>
 
@@ -24,7 +24,7 @@ export default function InstallationPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Quick Start</h2>
         <p className="text-muted-foreground">
-          Select your preferred framework to get started with Aural UI. 
+          Select your preferred framework to get started with Auralix UI. 
           These guides assume you already have a project with Tailwind CSS installed.
         </p>
         
@@ -45,7 +45,7 @@ export default function InstallationPage() {
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-lg mb-2">React Vite</h3>
                 <p className="text-sm text-muted-foreground">
-                  Guide for setting up Aural UI in a Vite-powered environment.
+                  Guide for setting up Auralix UI in a Vite-powered environment.
                 </p>
               </CardContent>
             </Card>
@@ -60,11 +60,11 @@ export default function InstallationPage() {
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Install the Package</h3>
           <p className="text-muted-foreground">
-            Install <code className="px-1.5 py-0.5 bg-muted rounded text-sm">aural-ui</code> and 
+            Install <code className="px-1.5 py-0.5 bg-muted rounded text-sm">auralix-ui</code> and 
             its peer dependencies via npm:
           </p>
           <CodeBlock 
-            code={`npm install aural-ui`}
+            code={`npm install auralix-ui`}
             language="bash"
           />
         </div>
@@ -74,13 +74,13 @@ export default function InstallationPage() {
       <section className="space-y-4">
         <h3 className="text-lg font-medium">Example Usage Components</h3>
         <CodeBlock 
-          code={`import { Alert, Button, Badge } from "aural-ui";
-import "aural-ui/styles.css";
+          code={`import { Alert, Button, Badge } from "auralix-ui";
+import "auralix-ui/styles.css";
 
 export default function ExamplePage() {
   return (
     <div className="p-6 space-y-4">
-      <Alert variant="success">Aural UI is ready to use!</Alert>
+      <Alert variant="success">Auralix UI is ready to use!</Alert>
       
       <div className="flex items-center gap-2">
         <Button onClick={() => console.log('Clicked!')}>

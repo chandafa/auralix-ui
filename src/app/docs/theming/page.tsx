@@ -4,8 +4,8 @@ import { CodeBlock } from "@/components/docs/CodeBlock";
 import { Card, CardContent } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Theming - Aural UI",
-  description: "Customize the look and feel of Aural UI components.",
+  title: "Theming - Auralix UI",
+  description: "Customize the look and feel of Auralix UI components.",
 };
 
 export default function ThemingPage() {
@@ -24,7 +24,7 @@ export default function ThemingPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">CSS Variables</h2>
         <p className="text-muted-foreground">
-          Aural UI uses CSS variables for theming. You can customize the look by 
+          Auralix UI uses CSS variables for theming. You can customize the look by 
           modifying these variables in your global CSS file:
         </p>
         
@@ -154,7 +154,7 @@ export default function ThemingPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Dark Mode</h2>
         <p className="text-muted-foreground">
-          Aural UI supports dark mode out of the box. The theme switches based on 
+          Auralix UI supports dark mode out of the box. The theme switches based on 
           the <code className="px-1.5 py-0.5 bg-muted rounded">.dark</code> class 
           on the <code className="px-1.5 py-0.5 bg-muted rounded">html</code> element.
         </p>
@@ -192,7 +192,7 @@ const toggleTheme = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Glass Effect</h2>
         <p className="text-muted-foreground">
-          Aural UI includes glass morphism utilities for premium styling:
+          Auralix UI includes glass morphism utilities for premium styling:
         </p>
         <CodeBlock 
           code={`/* Use these classes for glass effects */

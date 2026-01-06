@@ -4,8 +4,8 @@ import { CodeBlock } from "@/components/docs/CodeBlock";
 import { Card, CardContent } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Vite - Aural UI",
-  description: "How to install and setup Aural UI in Vite.",
+  title: "Vite - Auralix UI",
+  description: "How to install and setup Auralix UI in Vite.",
 };
 
 export default function VitePage() {
@@ -16,7 +16,7 @@ export default function VitePage() {
         <Badge variant="info" className="mb-4">Framework guides</Badge>
         <h1 className="text-4xl font-bold tracking-tight mb-4">Vite</h1>
         <p className="text-xl text-muted-foreground">
-          How to install and setup Aural UI in Vite
+          How to install and setup Auralix UI in Vite
         </p>
       </div>
 
@@ -41,11 +41,11 @@ npx tailwindcss init -p`}
         />
       </section>
 
-      {/* Setup Aural UI */}
+      {/* Setup Auralix UI */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Setup Aural UI</h2>
+        <h2 className="text-2xl font-semibold">Setup Auralix UI</h2>
         <CodeBlock 
-          code={`npm install aural-ui`}
+          code={`npm install auralix-ui`}
           language="bash"
         />
       </section>
@@ -54,7 +54,7 @@ npx tailwindcss init -p`}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Import Styles</h2>
         <p className="text-muted-foreground">
-          Add the Aural UI styles to your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">main.tsx</code>:
+          Add the Auralix UI styles to your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">main.tsx</code>:
         </p>
         <CodeBlock 
           code={`// src/main.tsx
@@ -62,7 +62,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import 'aural-ui/styles.css';
+import 'auralix-ui/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -82,7 +82,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/aural-ui/**/*.{js,mjs}",
+    "./node_modules/auralix-ui/**/*.{js,mjs}",
   ],
   theme: {
     extend: {
@@ -110,7 +110,7 @@ export default {
       {/* Done */}
       <section className="space-y-4">
         <p className="text-success font-medium">
-          Done! now you use Vite and Aural UI
+          Done! now you use Vite and Auralix UI
         </p>
       </section>
 
@@ -120,7 +120,7 @@ export default {
           <Card hoverable className="h-full">
             <CardContent className="pt-6">
               <p className="text-sm text-muted-foreground">← NextJS</p>
-              <p className="font-medium">How to install and setup Aural UI in NextJS</p>
+              <p className="font-medium">How to install and setup Auralix UI in NextJS</p>
             </CardContent>
           </Card>
         </Link>

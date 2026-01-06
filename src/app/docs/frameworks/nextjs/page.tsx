@@ -4,8 +4,8 @@ import { CodeBlock } from "@/components/docs/CodeBlock";
 import { Card, CardContent } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "NextJS - Aural UI",
-  description: "How to install and setup Aural UI in NextJS.",
+  title: "NextJS - Auralix UI",
+  description: "How to install and setup Auralix UI in NextJS.",
 };
 
 export default function NextJSPage() {
@@ -16,7 +16,7 @@ export default function NextJSPage() {
         <Badge variant="info" className="mb-4">Framework guides</Badge>
         <h1 className="text-4xl font-bold tracking-tight mb-4">NextJS</h1>
         <p className="text-xl text-muted-foreground">
-          How to install and setup Aural UI in NextJS
+          How to install and setup Auralix UI in NextJS
         </p>
       </div>
 
@@ -29,11 +29,11 @@ export default function NextJSPage() {
         />
       </section>
 
-      {/* Setup Aural UI */}
+      {/* Setup Auralix UI */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Setup Aural UI</h2>
+        <h2 className="text-2xl font-semibold">Setup Auralix UI</h2>
         <CodeBlock 
-          code={`npm install aural-ui`}
+          code={`npm install auralix-ui`}
           language="bash"
         />
       </section>
@@ -42,11 +42,11 @@ export default function NextJSPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Import Styles</h2>
         <p className="text-muted-foreground">
-          Add the Aural UI styles to your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">layout.tsx</code>:
+          Add the Auralix UI styles to your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">layout.tsx</code>:
         </p>
         <CodeBlock 
           code={`// app/layout.tsx
-import "aural-ui/styles.css";
+import "auralix-ui/styles.css";
 import "./globals.css";
 
 export default function RootLayout({
@@ -72,7 +72,7 @@ export default function RootLayout({
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/aural-ui/**/*.{js,mjs}",
+    "./node_modules/auralix-ui/**/*.{js,mjs}",
   ],
   theme: {
     extend: {
@@ -99,7 +99,7 @@ module.exports = {
       {/* Done */}
       <section className="space-y-4">
         <p className="text-success font-medium">
-          Done! now you use NextJS and Aural UI
+          Done! now you use NextJS and Auralix UI
         </p>
       </section>
 
@@ -117,7 +117,7 @@ module.exports = {
           <Card hoverable className="h-full text-right">
             <CardContent className="pt-6">
               <p className="text-sm text-muted-foreground">Vite →</p>
-              <p className="font-medium">How to install and setup Aural UI in Vite</p>
+              <p className="font-medium">How to install and setup Auralix UI in Vite</p>
             </CardContent>
           </Card>
         </Link>

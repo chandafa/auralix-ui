@@ -4,8 +4,8 @@ import { CodeBlock } from "@/components/docs/CodeBlock";
 import { Button } from "@/components/ui/Button";
 
 export const metadata = {
-  title: "Usage - Aural UI",
-  description: "Learn how to use Aural UI components in your project.",
+  title: "Usage - Auralix UI",
+  description: "Learn how to use Auralix UI components in your project.",
 };
 
 export default function UsagePage() {
@@ -16,7 +16,7 @@ export default function UsagePage() {
         <Badge variant="info" className="mb-4">Getting Started</Badge>
         <h1 className="text-4xl font-bold tracking-tight mb-4">Usage</h1>
         <p className="text-xl text-muted-foreground">
-          Learn how to import and use Aural UI components in your project.
+          Learn how to import and use Auralix UI components in your project.
         </p>
       </div>
 

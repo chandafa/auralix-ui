@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Introduction - Aural UI",
+  title: "Introduction - Auralix UI",
   description: "A modern UI component library built with React, TypeScript, and Tailwind CSS.",
 };
 
@@ -16,7 +16,7 @@ export default function IntroductionPage() {
         <Badge variant="info" className="mb-4">Documentation</Badge>
         <h1 className="text-4xl font-bold tracking-tight mb-4">Introduction</h1>
         <p className="text-xl text-muted-foreground">
-          Aural UI is a modern, accessible, and fully customizable component library 
+          Auralix UI is a modern, accessible, and fully customizable component library 
           built with React, TypeScript, and Tailwind CSS.
         </p>
       </div>
@@ -25,7 +25,7 @@ export default function IntroductionPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Overview</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Aural UI provides a set of high-quality UI components designed for building 
+          Auralix UI provides a set of high-quality UI components designed for building 
           modern web applications. Each component is carefully crafted to be accessible, 
           responsive, and easy to customize.
         </p>
@@ -116,7 +116,7 @@ export default function IntroductionPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Quick Start</h2>
         <p className="text-muted-foreground">
-          Get started with Aural UI in just a few minutes. Check out our installation guide 
+          Get started with Auralix UI in just a few minutes. Check out our installation guide 
           to set up your project.
         </p>
         <div className="flex gap-4">
