@@ -8,26 +8,53 @@ Modern UI component library with glass morphism effects for React.
 npm install auralix-ui
 ```
 
+### CDN
+
+```html
+<!-- Styles -->
+<link rel="stylesheet" href="https://unpkg.com/auralix-ui/dist/styles.css" />
+
+<!-- Peer Dependencies -->
+<script src="https://unpkg.com/react@19/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"></script>
+
+<!-- Auralix UI -->
+<script src="https://unpkg.com/auralix-ui/dist/index.global.js"></script>
+
+<script>
+  // Access components via window.AuralixUI
+  const { Button, Card } = window.AuralixUI;
+</script>
+```
+
 ## Setup
 
-### 1. Add CSS Variables
+### Tailwind CSS v4
 
-Import the styles in your main CSS file or `_app.tsx`/`layout.tsx`:
+Import the styles in your main CSS file:
+
+```css
+@import "tailwindcss";
+@import "auralix-ui/styles.css";
+
+/* Configure Tailwind to scan the package */
+@source "../node_modules/auralix-ui";
+```
+
+### Tailwind CSS v3 (Legacy)
+
+1. Import the styles:
 
 ```tsx
 import "auralix-ui/styles.css";
 ```
 
-Or add the CSS variables manually to your global CSS.
-
-### 2. Configure Tailwind CSS
-
-Add the following to your `tailwind.config.js`:
+2. Add the library to your `tailwind.config.js`:
 
 ```js
 module.exports = {
   content: [
-    // ... your paths
+    // ...
     "./node_modules/auralix-ui/**/*.{js,mjs}",
   ],
   theme: {
@@ -40,10 +67,7 @@ module.exports = {
         border: "var(--border)",
         primary: "var(--primary)",
         "primary-foreground": "var(--primary-foreground)",
-        secondary: "var(--secondary)",
-        "secondary-foreground": "var(--secondary-foreground)",
         destructive: "var(--destructive)",
-        "destructive-foreground": "var(--destructive-foreground)",
         success: "var(--success)",
         warning: "var(--warning)",
         info: "var(--info)",

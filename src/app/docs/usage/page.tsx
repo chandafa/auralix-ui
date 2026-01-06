@@ -24,10 +24,10 @@ export default function UsagePage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Basic Usage</h2>
         <p className="text-muted-foreground">
-          After copying a component to your project, you can import and use it like any React component:
+          Import the component from the package and use it in your React application:
         </p>
         <CodeBlock 
-          code={`import { Button } from "@/components/ui/Button";
+          code={`import { Button } from "auralix-ui";
 
 export default function MyComponent() {
   return (
@@ -109,7 +109,7 @@ export default function MyComponent() {
   CardDescription, 
   CardContent,
   CardFooter 
-} from "@/components/ui/Card";
+} from "auralix-ui";
 
 <Card>
   <CardHeader>
@@ -154,7 +154,7 @@ export default function MyComponent() {
           All components are fully typed. You can import prop types for use in your own components:
         </p>
         <CodeBlock 
-          code={`import { Button, type ButtonProps } from "@/components/ui/Button";
+          code={`import { Button, type ButtonProps } from "auralix-ui";
 
 interface MyButtonProps extends ButtonProps {
   loading?: boolean;

@@ -35,8 +35,7 @@ npm install`}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Setup Tailwind CSS</h2>
         <CodeBlock 
-          code={`npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p`}
+          code={`npm install tailwindcss @tailwindcss/postcss postcss`}
           language="bash"
         />
       </section>
@@ -50,60 +49,18 @@ npx tailwindcss init -p`}
         />
       </section>
 
-      {/* Import Styles */}
+      {/* Import Styles & Configure */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Import Styles</h2>
+        <h2 className="text-2xl font-semibold">Import Styles & Configure</h2>
         <p className="text-muted-foreground">
-          Add the Auralix UI styles to your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">main.tsx</code>:
+          Import the styles and add the source directive to your global CSS file (e.g. <code className="px-1.5 py-0.5 bg-muted rounded text-sm">src/index.css</code>):
         </p>
         <CodeBlock 
-          code={`// src/main.tsx
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-import 'auralix-ui/styles.css';
+          code={`@import "tailwindcss";
+@import "auralix-ui/styles.css";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);`}
-          language="tsx"
-        />
-      </section>
-
-      {/* Configure Tailwind */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Configure Tailwind</h2>
-        <CodeBlock 
-          code={`// tailwind.config.js
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/auralix-ui/**/*.{js,mjs}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
-        border: "var(--border)",
-        primary: "var(--primary)",
-        "primary-foreground": "var(--primary-foreground)",
-        destructive: "var(--destructive)",
-        success: "var(--success)",
-        warning: "var(--warning)",
-        info: "var(--info)",
-      },
-    },
-  },
-  plugins: [],
-};`}
-          language="javascript"
+@source "../../node_modules/auralix-ui";`}
+          language="css"
         />
       </section>
 

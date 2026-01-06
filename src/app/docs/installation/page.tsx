@@ -68,14 +68,84 @@ export default function InstallationPage() {
             language="bash"
           />
         </div>
+
+        <div className="space-y-4">
+          <h3 className="text-lg font-medium">Use via CDN</h3>
+          <p className="text-muted-foreground">
+            You can also use Auralix UI directly in the browser via CDN. Add the following to your HTML head:
+          </p>
+          <CodeBlock 
+            code={`<!-- Styles -->
+<link rel="stylesheet" href="https://unpkg.com/auralix-ui/dist/styles.css">
+
+<!-- Dependencies -->
+<script src="https://unpkg.com/react@19/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"></script>
+
+<!-- Auralix UI -->
+<script src="https://unpkg.com/auralix-ui/dist/index.global.js"></script>
+
+<script>
+  // Access components via window.AuralixUI
+  const { Button } = window.AuralixUI;
+</script>`}
+            language="html"
+          />
+        </div>
+      </section>
+
+      {/* Tailwind CSS Setup */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Setup Tailwind CSS</h2>
+        
+        <div className="space-y-4">
+          <h3 className="text-lg font-medium">For Tailwind CSS v4.0+</h3>
+          <p className="text-muted-foreground">
+            Import the styles and configure the source in your main CSS file:
+          </p>
+          <CodeBlock 
+            code={`@import "tailwindcss";
+@import "auralix-ui/styles.css";
+
+@source "../../node_modules/auralix-ui";`}
+            language="css"
+          />
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-lg font-medium">For Tailwind CSS v3 (Legacy)</h3>
+          <p className="text-muted-foreground">
+            Import the styles in your main CSS or entry file:
+          </p>
+          <CodeBlock 
+            code={`import "auralix-ui/styles.css";`}
+            language="tsx"
+          />
+          <p className="text-muted-foreground mt-4">
+            And update your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">tailwind.config.js</code>:
+          </p>
+          <CodeBlock 
+            code={`module.exports = {
+  content: [
+    // ...
+    "./node_modules/auralix-ui/**/*.{js,mjs}",
+  ],
+  // ...
+}`}
+            language="javascript"
+          />
+        </div>
       </section>
 
       {/* Example Usage */}
       <section className="space-y-4">
         <h3 className="text-lg font-medium">Example Usage Components</h3>
+        <p className="text-muted-foreground text-sm">
+          If using Tailwind v3, make sure to import the styles first:
+        </p>
         <CodeBlock 
           code={`import { Alert, Button, Badge } from "auralix-ui";
-import "auralix-ui/styles.css";
+// import "auralix-ui/styles.css"; // Only needed for Tailwind v3
 
 export default function ExamplePage() {
   return (

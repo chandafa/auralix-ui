@@ -1,6 +1,6 @@
 {
   "name": "auralix-ui",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Modern UI component library with glass morphism effects for React",
   "author": "Auralix UI Team",
   "license": "MIT",
@@ -19,6 +19,8 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "unpkg": "./dist/index.global.js",
+  "jsdelivr": "./dist/index.global.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

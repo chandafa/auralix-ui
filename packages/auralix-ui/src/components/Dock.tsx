@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../utils";
 
 export interface DockProps {
   className?: string;

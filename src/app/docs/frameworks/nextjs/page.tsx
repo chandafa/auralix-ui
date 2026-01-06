@@ -33,66 +33,25 @@ export default function NextJSPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Setup Auralix UI</h2>
         <CodeBlock 
-          code={`npm install auralix-ui`}
+          code={`npm install auralix-ui tailwindcss @tailwindcss/postcss postcss`}
           language="bash"
         />
       </section>
 
-      {/* Import Styles */}
+      {/* Import Styles & Configure */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Import Styles</h2>
+        <h2 className="text-2xl font-semibold">Import Styles & Configure</h2>
         <p className="text-muted-foreground">
-          Add the Auralix UI styles to your <code className="px-1.5 py-0.5 bg-muted rounded text-sm">layout.tsx</code>:
+          Import the styles and add the source directive to your global CSS file (e.g. <code className="px-1.5 py-0.5 bg-muted rounded text-sm">app/globals.css</code>):
         </p>
         <CodeBlock 
-          code={`// app/layout.tsx
-import "auralix-ui/styles.css";
-import "./globals.css";
+          code={`@import "tailwindcss";
+@import "auralix-ui/styles.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-}`}
-          language="tsx"
-        />
-      </section>
+@source "../../node_modules/auralix-ui";
 
-      {/* Configure Tailwind */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Configure Tailwind</h2>
-        <CodeBlock 
-          code={`// tailwind.config.js
-module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/auralix-ui/**/*.{js,mjs}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
-        border: "var(--border)",
-        primary: "var(--primary)",
-        "primary-foreground": "var(--primary-foreground)",
-        destructive: "var(--destructive)",
-        success: "var(--success)",
-        warning: "var(--warning)",
-        info: "var(--info)",
-      },
-    },
-  },
-};`}
-          language="javascript"
+/* Your other styles */`}
+          language="css"
         />
       </section>
 
