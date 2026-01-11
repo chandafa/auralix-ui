@@ -27,27 +27,84 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-xl bg-foreground text-background shadow-lg md:hidden"
-        aria-label="Toggle menu"
-      >
-        {isOpen ? (
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        ) : (
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        )}
-      </button>
+      {/* Mobile Top Navbar */}
+      <header className="fixed top-0 left-0 right-0 z-50 flex h-14 items-center justify-between border-b border-border bg-background/95 backdrop-blur-sm px-4 md:hidden">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 shadow-lg shadow-violet-500/25 transition-all group-hover:scale-110 group-hover:shadow-violet-500/40">
+            <span className="text-sm font-bold text-white">A</span>
+          </div>
+          <span className="text-lg font-bold tracking-tight text-foreground">
+            Auralix UI
+          </span>
+        </Link>
+
+        {/* Right Actions */}
+        <div className="flex items-center gap-2">
+          {/* Search Button */}
+          <button
+            onClick={() => setIsCommandOpen(true)}
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+            aria-label="Search"
+          >
+            <svg
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          {/* Hamburger Menu */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      </header>
 
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden pt-14"
           onClick={() => setIsOpen(false)}
         />
       )}
@@ -55,7 +112,8 @@ export function Sidebar() {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed left-0 top-0 z-40 flex h-screen w-64 flex-col border-r border-border bg-background transition-transform duration-300",
+          "fixed left-0 z-40 flex w-64 flex-col border-r border-border bg-background transition-transform duration-300",
+          "top-14 h-[calc(100vh-3.5rem)] md:top-0 md:h-screen",
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         )}
       >
@@ -73,15 +131,27 @@ export function Sidebar() {
 
         {/* Search */}
         <div className="p-3">
-          <button 
+          <button
             onClick={() => setIsCommandOpen(true)}
             className="flex w-full items-center gap-2 rounded-lg border border-border bg-muted/50 px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted"
           >
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
             </svg>
             <span>Search</span>
-            <kbd className="ml-auto rounded bg-muted px-1.5 py-0.5 text-xs font-medium">Ctrl K</kbd>
+            <kbd className="ml-auto rounded bg-muted px-1.5 py-0.5 text-xs font-medium">
+              Ctrl K
+            </kbd>
           </button>
         </div>
 
@@ -113,17 +183,24 @@ export function Sidebar() {
               className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <span>Framework guides</span>
-              <svg 
-                className={cn("h-4 w-4 transition-transform", frameworksOpen && "rotate-90")} 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
+              <svg
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  frameworksOpen && "rotate-90"
+                )}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
-            
+
             {frameworksOpen && (
               <div className="ml-3 mt-1 space-y-1 border-l border-border pl-3">
                 {frameworkGuides.map((item) => (
@@ -152,17 +229,24 @@ export function Sidebar() {
               className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <span>Animations</span>
-              <svg 
-                className={cn("h-4 w-4 transition-transform", animationsOpen && "rotate-90")} 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
+              <svg
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  animationsOpen && "rotate-90"
+                )}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
-            
+
             {animationsOpen && (
               <div className="ml-3 mt-1 space-y-1 border-l border-border pl-3">
                 {animations.map((item) => (
@@ -191,17 +275,24 @@ export function Sidebar() {
               className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <span>Components</span>
-              <svg 
-                className={cn("h-4 w-4 transition-transform", componentsOpen && "rotate-90")} 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
+              <svg
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  componentsOpen && "rotate-90"
+                )}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
-            
+
             {componentsOpen && (
               <div className="ml-3 mt-1 space-y-1 border-l border-border pl-3">
                 {components.map((component) => (
@@ -230,17 +321,24 @@ export function Sidebar() {
               className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <span>Templates</span>
-              <svg 
-                className={cn("h-4 w-4 transition-transform", templatesOpen && "rotate-90")} 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
+              <svg
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  templatesOpen && "rotate-90"
+                )}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
-            
+
             {templatesOpen && (
               <div className="ml-3 mt-1 space-y-1 border-l border-border pl-3">
                 {templates.map((template) => (
@@ -270,24 +368,48 @@ export function Sidebar() {
               onClick={toggleTheme}
               className={cn(
                 "flex h-8 w-8 items-center justify-center rounded-lg transition-colors",
-                theme === "light" ? "bg-muted text-foreground" : "text-muted-foreground hover:text-foreground"
+                theme === "light"
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               )}
               aria-label="Light mode"
             >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
               </svg>
             </button>
             <button
               onClick={toggleTheme}
               className={cn(
                 "flex h-8 w-8 items-center justify-center rounded-lg transition-colors",
-                theme === "dark" ? "bg-muted text-foreground" : "text-muted-foreground hover:text-foreground"
+                theme === "dark"
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
               )}
               aria-label="Dark mode"
             >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
               </svg>
             </button>
           </div>

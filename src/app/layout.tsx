@@ -70,6 +70,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-sans antialiased`}
         style={{ fontFamily: "var(--font-poppins), -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif" }}
+        suppressHydrationWarning
       >
          <JsonLd<any>
           json={{
